@@ -41,6 +41,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.fullnamebox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.updatetext = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,35 +68,38 @@
             // deletebtn
             // 
             this.deletebtn.BackColor = System.Drawing.Color.IndianRed;
-            this.deletebtn.Font = new System.Drawing.Font("SimSun", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.deletebtn.Font = new System.Drawing.Font("Microsoft YaHei", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.deletebtn.Location = new System.Drawing.Point(635, 234);
             this.deletebtn.Name = "deletebtn";
             this.deletebtn.Size = new System.Drawing.Size(116, 36);
             this.deletebtn.TabIndex = 35;
             this.deletebtn.Text = "Delete";
             this.deletebtn.UseVisualStyleBackColor = false;
+            this.deletebtn.Click += new System.EventHandler(this.deletebtn_Click);
             // 
             // updatebtn
             // 
             this.updatebtn.BackColor = System.Drawing.Color.RosyBrown;
-            this.updatebtn.Font = new System.Drawing.Font("SimSun", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.updatebtn.Font = new System.Drawing.Font("Microsoft YaHei", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.updatebtn.Location = new System.Drawing.Point(635, 142);
             this.updatebtn.Name = "updatebtn";
-            this.updatebtn.Size = new System.Drawing.Size(116, 36);
+            this.updatebtn.Size = new System.Drawing.Size(116, 44);
             this.updatebtn.TabIndex = 34;
             this.updatebtn.Text = "Update";
             this.updatebtn.UseVisualStyleBackColor = false;
+            this.updatebtn.Click += new System.EventHandler(this.updatebtn_Click);
             // 
             // savebtn
             // 
             this.savebtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.savebtn.Font = new System.Drawing.Font("SimSun", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.savebtn.Font = new System.Drawing.Font("Microsoft YaHei", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.savebtn.Location = new System.Drawing.Point(635, 65);
             this.savebtn.Name = "savebtn";
             this.savebtn.Size = new System.Drawing.Size(116, 36);
             this.savebtn.TabIndex = 33;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = false;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
             // 
             // addressbox
             // 
@@ -165,11 +169,19 @@
             this.label1.TabIndex = 25;
             this.label1.Text = "Full name";
             // 
+            // updatetext
+            // 
+            this.updatetext.Location = new System.Drawing.Point(38, 149);
+            this.updatetext.Name = "updatetext";
+            this.updatetext.Size = new System.Drawing.Size(100, 22);
+            this.updatetext.TabIndex = 36;
+            // 
             // MemberForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 689);
+            this.Controls.Add(this.updatetext);
             this.Controls.Add(this.deletebtn);
             this.Controls.Add(this.updatebtn);
             this.Controls.Add(this.savebtn);
@@ -205,5 +217,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox fullnamebox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox updatetext;
     }
 }

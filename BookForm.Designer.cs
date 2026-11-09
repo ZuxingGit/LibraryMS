@@ -43,6 +43,7 @@
             this.authorbox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.updatetext = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,6 +77,7 @@
             this.deletebtn.TabIndex = 24;
             this.deletebtn.Text = "Delete";
             this.deletebtn.UseVisualStyleBackColor = false;
+            this.deletebtn.Click += new System.EventHandler(this.deletebtn_Click);
             // 
             // updatebtn
             // 
@@ -87,6 +89,7 @@
             this.updatebtn.TabIndex = 23;
             this.updatebtn.Text = "Update";
             this.updatebtn.UseVisualStyleBackColor = false;
+            this.updatebtn.Click += new System.EventHandler(this.updatebtn_Click);
             // 
             // savebtn
             // 
@@ -98,6 +101,7 @@
             this.savebtn.TabIndex = 22;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = false;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
             // 
             // label4
             // 
@@ -187,11 +191,19 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(223, 35);
             this.dateTimePicker1.TabIndex = 29;
             // 
+            // updatetext
+            // 
+            this.updatetext.Location = new System.Drawing.Point(13, 184);
+            this.updatetext.Name = "updatetext";
+            this.updatetext.Size = new System.Drawing.Size(100, 22);
+            this.updatetext.TabIndex = 30;
+            // 
             // BookForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 661);
+            this.Controls.Add(this.updatetext);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.authorbox);
             this.Controls.Add(this.label5);
@@ -209,6 +221,7 @@
             this.Controls.Add(this.label1);
             this.Name = "BookForm";
             this.Text = "BookForm";
+            this.Load += new System.EventHandler(this.BookForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -232,5 +245,6 @@
         private System.Windows.Forms.TextBox authorbox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox updatetext;
     }
 }

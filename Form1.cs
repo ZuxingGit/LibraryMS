@@ -19,7 +19,23 @@ namespace LibraryMS
 
         private void label1_Click(object sender, EventArgs e)
         {
+        }
+        private void manageMembersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MemberForm memberForm = new MemberForm();
+            memberForm.Show();
+        }
 
+        private void manageBooksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BookForm bookForm = new BookForm();
+            bookForm.Show();
+        }
+
+        private void manageBorrowsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BorrowForm borrowForm = new BorrowForm();
+            borrowForm.Show();
         }
     }
 }

@@ -31,10 +31,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageMembersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageBooksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageBorrowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,29 +71,32 @@
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 25);
             this.fileToolStripMenuItem.Text = "File";
             // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(46, 25);
-            this.exitToolStripMenuItem.Text = "Exit";
-            // 
             // manageMembersToolStripMenuItem
             // 
             this.manageMembersToolStripMenuItem.Name = "manageMembersToolStripMenuItem";
             this.manageMembersToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.manageMembersToolStripMenuItem.Text = "Manage Members";
+            this.manageMembersToolStripMenuItem.Click += new System.EventHandler(this.manageMembersToolStripMenuItem_Click);
             // 
             // manageBooksToolStripMenuItem
             // 
             this.manageBooksToolStripMenuItem.Name = "manageBooksToolStripMenuItem";
             this.manageBooksToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.manageBooksToolStripMenuItem.Text = "Manage Books";
+            this.manageBooksToolStripMenuItem.Click += new System.EventHandler(this.manageBooksToolStripMenuItem_Click);
             // 
             // manageBorrowsToolStripMenuItem
             // 
             this.manageBorrowsToolStripMenuItem.Name = "manageBorrowsToolStripMenuItem";
             this.manageBorrowsToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.manageBorrowsToolStripMenuItem.Text = "Manage Borrows";
+            this.manageBorrowsToolStripMenuItem.Click += new System.EventHandler(this.manageBorrowsToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(46, 25);
+            this.exitToolStripMenuItem.Text = "Exit";
             // 
             // Form1
             // 
