@@ -36,8 +36,9 @@
             this.savebtn = new System.Windows.Forms.Button();
             this.updatebtn = new System.Windows.Forms.Button();
             this.deletebtn = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.borrowDataGridView = new System.Windows.Forms.DataGridView();
+            this.borrowid = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.borrowDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -98,6 +99,7 @@
             this.savebtn.TabIndex = 5;
             this.savebtn.Text = "Save";
             this.savebtn.UseVisualStyleBackColor = true;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
             // 
             // updatebtn
             // 
@@ -108,6 +110,7 @@
             this.updatebtn.TabIndex = 6;
             this.updatebtn.Text = "Update";
             this.updatebtn.UseVisualStyleBackColor = true;
+            this.updatebtn.Click += new System.EventHandler(this.updatebtn_Click);
             // 
             // deletebtn
             // 
@@ -118,23 +121,32 @@
             this.deletebtn.TabIndex = 7;
             this.deletebtn.Text = "Delete";
             this.deletebtn.UseVisualStyleBackColor = true;
+            this.deletebtn.Click += new System.EventHandler(this.deletebtn_Click);
             // 
-            // dataGridView1
+            // borrowDataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 252);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 45;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 186);
-            this.dataGridView1.TabIndex = 8;
+            this.borrowDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.borrowDataGridView.Location = new System.Drawing.Point(12, 252);
+            this.borrowDataGridView.Name = "borrowDataGridView";
+            this.borrowDataGridView.RowHeadersWidth = 45;
+            this.borrowDataGridView.RowTemplate.Height = 24;
+            this.borrowDataGridView.Size = new System.Drawing.Size(776, 186);
+            this.borrowDataGridView.TabIndex = 8;
+            // 
+            // borrowid
+            // 
+            this.borrowid.Location = new System.Drawing.Point(603, 18);
+            this.borrowid.Name = "borrowid";
+            this.borrowid.Size = new System.Drawing.Size(100, 22);
+            this.borrowid.TabIndex = 9;
             // 
             // BorrowForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.borrowid);
+            this.Controls.Add(this.borrowDataGridView);
             this.Controls.Add(this.deletebtn);
             this.Controls.Add(this.updatebtn);
             this.Controls.Add(this.savebtn);
@@ -145,7 +157,8 @@
             this.Controls.Add(this.label1);
             this.Name = "BorrowForm";
             this.Text = "BorrowForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.BorrowForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.borrowDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,6 +174,7 @@
         private System.Windows.Forms.Button savebtn;
         private System.Windows.Forms.Button updatebtn;
         private System.Windows.Forms.Button deletebtn;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView borrowDataGridView;
+        private System.Windows.Forms.TextBox borrowid;
     }
 }
